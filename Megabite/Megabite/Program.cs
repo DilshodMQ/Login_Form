@@ -1,7 +1,9 @@
 namespace Megabite
 {
-    internal static class Program
+    public static class Program
     {
+        
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -11,7 +13,9 @@ namespace Megabite
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new LoginForm());
+            LoginForm loginForm = new LoginForm();
+            loginForm.instance=new LoginForm();
+            Application.Run(loginForm.instance);
         }
     }
 }

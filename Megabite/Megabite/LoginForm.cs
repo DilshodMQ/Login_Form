@@ -13,19 +13,34 @@ namespace Megabite
 {
     public partial class LoginForm : Form
     {
+        private static LoginForm _instance;
+
         public LoginForm()
         {
             InitializeComponent();
 
-            this.pictureBox4.Visible = false;
+            this.close_pass_button.Visible = false;
             loginField.Text = "Введите логин";
             loginField.ForeColor = Color.Gray;
             passField.Text = "Введите парол";
             passField.ForeColor = Color.Gray;
         }
 
-      
-        private void button1_Click(object sender, EventArgs e)
+        public LoginForm instance
+        {
+            get
+            {
+                if (LoginForm._instance == null)
+                   LoginForm. _instance = new LoginForm();
+                return LoginForm._instance;
+            }
+            set
+            {
+                LoginForm._instance = value;
+            }
+        }
+
+        private void login_button_Click(object sender, EventArgs e)
         {
             string login = loginField.Text;
             string pass = MD5Service.GetHash(passField.Text);
@@ -61,25 +76,25 @@ namespace Megabite
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void registr_button_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             RegistrForm registrForm=new RegistrForm();  
             registrForm.Show();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void open_pass_button_Click(object sender, EventArgs e)
         {
             passField.UseSystemPasswordChar = false;
-            pictureBox3.Visible = false;
-            pictureBox4.Visible = true;
+            open_pass_button.Visible = false;
+            close_pass_button.Visible = true;
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void close_pass_button_Click(object sender, EventArgs e)
         {
             passField.UseSystemPasswordChar = true;
-            pictureBox3.Visible = true;
-            pictureBox4.Visible = false;
+            open_pass_button.Visible = true;
+            close_pass_button.Visible = false;
 
         }
 
@@ -97,6 +112,7 @@ namespace Megabite
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            passField.UseSystemPasswordChar=true;
             if(File.Exists("UserCrediantials.txt"))
             {
                 using(StreamReader reader=new StreamReader("UserCrediantials.txt"))
@@ -106,6 +122,7 @@ namespace Megabite
                     loginField.Text = user.Login;
                     passField.Text = user.Password;
                 }
+                File.Delete("UserCrediantials.txt");
             }
 
         }
@@ -147,6 +164,11 @@ namespace Megabite
                 passField.UseSystemPasswordChar= false;
                 passField.ForeColor = Color.Gray;
             }
+        }
+
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            LoginForm._instance = null;
         }
     }
 }

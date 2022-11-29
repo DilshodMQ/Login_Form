@@ -29,76 +29,75 @@
         private void InitializeComponent()
         {
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.close_pass_button = new System.Windows.Forms.PictureBox();
+            this.open_pass_button = new System.Windows.Forms.PictureBox();
+            this.registr_button = new System.Windows.Forms.Button();
             this.rememberCheckBox = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.login_button = new System.Windows.Forms.Button();
             this.passField = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.passField_image = new System.Windows.Forms.PictureBox();
             this.loginField = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.loginField_image = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close_pass_button)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.open_pass_button)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.passField_image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginField_image)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.mainPanel.Controls.Add(this.pictureBox4);
-            this.mainPanel.Controls.Add(this.pictureBox3);
-            this.mainPanel.Controls.Add(this.button2);
+            this.mainPanel.Controls.Add(this.close_pass_button);
+            this.mainPanel.Controls.Add(this.open_pass_button);
+            this.mainPanel.Controls.Add(this.registr_button);
             this.mainPanel.Controls.Add(this.rememberCheckBox);
-            this.mainPanel.Controls.Add(this.button1);
+            this.mainPanel.Controls.Add(this.login_button);
             this.mainPanel.Controls.Add(this.passField);
-            this.mainPanel.Controls.Add(this.pictureBox2);
+            this.mainPanel.Controls.Add(this.passField_image);
             this.mainPanel.Controls.Add(this.loginField);
-            this.mainPanel.Controls.Add(this.pictureBox1);
+            this.mainPanel.Controls.Add(this.loginField_image);
             this.mainPanel.Controls.Add(this.panel2);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(407, 385);
             this.mainPanel.TabIndex = 0;
-           
             // 
-            // pictureBox4
+            // close_pass_button
             // 
-            this.pictureBox4.Image = global::Megabite.Properties.Resources.close1;
-            this.pictureBox4.Location = new System.Drawing.Point(350, 185);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(39, 33);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.close_pass_button.Image = global::Megabite.Properties.Resources.close1;
+            this.close_pass_button.Location = new System.Drawing.Point(350, 185);
+            this.close_pass_button.Name = "close_pass_button";
+            this.close_pass_button.Size = new System.Drawing.Size(39, 33);
+            this.close_pass_button.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.close_pass_button.TabIndex = 9;
+            this.close_pass_button.TabStop = false;
+            this.close_pass_button.Click += new System.EventHandler(this.close_pass_button_Click);
             // 
-            // pictureBox3
+            // open_pass_button
             // 
-            this.pictureBox3.Image = global::Megabite.Properties.Resources.open;
-            this.pictureBox3.Location = new System.Drawing.Point(350, 185);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(39, 33);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.open_pass_button.Image = global::Megabite.Properties.Resources.open;
+            this.open_pass_button.Location = new System.Drawing.Point(350, 185);
+            this.open_pass_button.Name = "open_pass_button";
+            this.open_pass_button.Size = new System.Drawing.Size(39, 33);
+            this.open_pass_button.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.open_pass_button.TabIndex = 8;
+            this.open_pass_button.TabStop = false;
+            this.open_pass_button.Click += new System.EventHandler(this.open_pass_button_Click);
             // 
-            // button2
+            // registr_button
             // 
-            this.button2.Location = new System.Drawing.Point(132, 347);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(151, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Зарегистрироваться";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.registr_button.Location = new System.Drawing.Point(132, 347);
+            this.registr_button.Name = "registr_button";
+            this.registr_button.Size = new System.Drawing.Size(151, 23);
+            this.registr_button.TabIndex = 7;
+            this.registr_button.Text = "Зарегистрироваться";
+            this.registr_button.UseVisualStyleBackColor = true;
+            this.registr_button.Click += new System.EventHandler(this.registr_button_Click);
             // 
             // rememberCheckBox
             // 
@@ -110,23 +109,23 @@
             this.rememberCheckBox.Text = "Запомнить меня ";
             this.rememberCheckBox.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // login_button
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(255)))), ((int)(((byte)(153)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(95, 271);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(225, 53);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Войти";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.login_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(255)))), ((int)(((byte)(153)))));
+            this.login_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.login_button.FlatAppearance.BorderSize = 0;
+            this.login_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(0)))));
+            this.login_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
+            this.login_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.login_button.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.login_button.ForeColor = System.Drawing.Color.White;
+            this.login_button.Location = new System.Drawing.Point(95, 271);
+            this.login_button.Name = "login_button";
+            this.login_button.Size = new System.Drawing.Size(225, 53);
+            this.login_button.TabIndex = 5;
+            this.login_button.Text = "Войти";
+            this.login_button.UseVisualStyleBackColor = false;
+            this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
             // passField
             // 
@@ -138,15 +137,15 @@
             this.passField.Enter += new System.EventHandler(this.passField_Enter);
             this.passField.Leave += new System.EventHandler(this.passField_Leave);
             // 
-            // pictureBox2
+            // passField_image
             // 
-            this.pictureBox2.Image = global::Megabite.Properties.Resources._lock;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 173);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(64, 54);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.passField_image.Image = global::Megabite.Properties.Resources._lock;
+            this.passField_image.Location = new System.Drawing.Point(12, 173);
+            this.passField_image.Name = "passField_image";
+            this.passField_image.Size = new System.Drawing.Size(64, 54);
+            this.passField_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.passField_image.TabIndex = 3;
+            this.passField_image.TabStop = false;
             // 
             // loginField
             // 
@@ -159,15 +158,15 @@
             this.loginField.Enter += new System.EventHandler(this.loginField_Enter);
             this.loginField.Leave += new System.EventHandler(this.loginField_Leave);
             // 
-            // pictureBox1
+            // loginField_image
             // 
-            this.pictureBox1.Image = global::Megabite.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 106);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 49);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.loginField_image.Image = global::Megabite.Properties.Resources.user;
+            this.loginField_image.Location = new System.Drawing.Point(12, 106);
+            this.loginField_image.Name = "loginField_image";
+            this.loginField_image.Size = new System.Drawing.Size(64, 49);
+            this.loginField_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.loginField_image.TabIndex = 1;
+            this.loginField_image.TabStop = false;
             // 
             // panel2
             // 
@@ -199,13 +198,14 @@
             this.Controls.Add(this.mainPanel);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginForm_FormClosed);
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close_pass_button)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.open_pass_button)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.passField_image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginField_image)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -216,15 +216,15 @@
         private Panel mainPanel;
         private Panel panel2;
         private Label label1;
-        private Button button1;
+        private Button login_button;
         private TextBox passField;
-        private PictureBox pictureBox2;
+        private PictureBox passField_image;
         private TextBox loginField;
-        private PictureBox pictureBox1;
+        private PictureBox loginField_image;
         private CheckBox rememberCheckBox;
-        private Button button2;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
+        private Button registr_button;
+        private PictureBox close_pass_button;
+        private PictureBox open_pass_button;
 
         public string passText
         {

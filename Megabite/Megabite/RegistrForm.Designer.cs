@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.passField = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.passField_image = new System.Windows.Forms.PictureBox();
             this.loginField = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.loginField_image = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.open_pass_button = new System.Windows.Forms.PictureBox();
+            this.close_pass_button = new System.Windows.Forms.PictureBox();
             this.registrBtn = new System.Windows.Forms.Button();
             this.povtorPassField = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.povtorpassField_image = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.passField_image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginField_image)).BeginInit();
             this.panel2.SuspendLayout();
             this.mainPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.open_pass_button)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close_pass_button)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.povtorpassField_image)).BeginInit();
             this.SuspendLayout();
             // 
             // passField
@@ -60,15 +60,15 @@
             this.passField.Enter += new System.EventHandler(this.passField_Enter);
             this.passField.Leave += new System.EventHandler(this.passField_Leave);
             // 
-            // pictureBox2
+            // passField_image
             // 
-            this.pictureBox2.Image = global::Megabite.Properties.Resources._lock;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 173);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(64, 54);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.passField_image.Image = global::Megabite.Properties.Resources._lock;
+            this.passField_image.Location = new System.Drawing.Point(12, 173);
+            this.passField_image.Name = "passField_image";
+            this.passField_image.Size = new System.Drawing.Size(64, 54);
+            this.passField_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.passField_image.TabIndex = 3;
+            this.passField_image.TabStop = false;
             // 
             // loginField
             // 
@@ -82,15 +82,15 @@
             this.loginField.Enter += new System.EventHandler(this.loginField_Enter);
             this.loginField.Leave += new System.EventHandler(this.loginField_Leave);
             // 
-            // pictureBox1
+            // loginField_image
             // 
-            this.pictureBox1.Image = global::Megabite.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 106);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 49);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.loginField_image.Image = global::Megabite.Properties.Resources.user;
+            this.loginField_image.Location = new System.Drawing.Point(12, 106);
+            this.loginField_image.Name = "loginField_image";
+            this.loginField_image.Size = new System.Drawing.Size(64, 49);
+            this.loginField_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.loginField_image.TabIndex = 1;
+            this.loginField_image.TabStop = false;
             // 
             // panel2
             // 
@@ -117,15 +117,15 @@
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.mainPanel.Controls.Add(this.pictureBox5);
-            this.mainPanel.Controls.Add(this.pictureBox4);
+            this.mainPanel.Controls.Add(this.open_pass_button);
+            this.mainPanel.Controls.Add(this.close_pass_button);
             this.mainPanel.Controls.Add(this.registrBtn);
             this.mainPanel.Controls.Add(this.povtorPassField);
-            this.mainPanel.Controls.Add(this.pictureBox3);
+            this.mainPanel.Controls.Add(this.povtorpassField_image);
             this.mainPanel.Controls.Add(this.passField);
-            this.mainPanel.Controls.Add(this.pictureBox2);
+            this.mainPanel.Controls.Add(this.passField_image);
             this.mainPanel.Controls.Add(this.loginField);
-            this.mainPanel.Controls.Add(this.pictureBox1);
+            this.mainPanel.Controls.Add(this.loginField_image);
             this.mainPanel.Controls.Add(this.panel2);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
@@ -133,27 +133,27 @@
             this.mainPanel.Size = new System.Drawing.Size(426, 378);
             this.mainPanel.TabIndex = 1;
             // 
-            // pictureBox5
+            // open_pass_button
             // 
-            this.pictureBox5.Image = global::Megabite.Properties.Resources.open;
-            this.pictureBox5.Location = new System.Drawing.Point(375, 185);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(39, 33);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 11;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.open_pass_button.Image = global::Megabite.Properties.Resources.open;
+            this.open_pass_button.Location = new System.Drawing.Point(375, 186);
+            this.open_pass_button.Name = "open_pass_button";
+            this.open_pass_button.Size = new System.Drawing.Size(39, 33);
+            this.open_pass_button.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.open_pass_button.TabIndex = 11;
+            this.open_pass_button.TabStop = false;
+            this.open_pass_button.Click += new System.EventHandler(this.open_pass_button_Click);
             // 
-            // pictureBox4
+            // close_pass_button
             // 
-            this.pictureBox4.Image = global::Megabite.Properties.Resources.close1;
-            this.pictureBox4.Location = new System.Drawing.Point(375, 185);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(39, 33);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 10;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.close_pass_button.Image = global::Megabite.Properties.Resources.close1;
+            this.close_pass_button.Location = new System.Drawing.Point(375, 185);
+            this.close_pass_button.Name = "close_pass_button";
+            this.close_pass_button.Size = new System.Drawing.Size(39, 33);
+            this.close_pass_button.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.close_pass_button.TabIndex = 10;
+            this.close_pass_button.TabStop = false;
+            this.close_pass_button.Click += new System.EventHandler(this.close_pass_button_Click);
             // 
             // registrBtn
             // 
@@ -176,15 +176,15 @@
             this.povtorPassField.Enter += new System.EventHandler(this.povtorPassField_Enter);
             this.povtorPassField.Leave += new System.EventHandler(this.povtorPassField_Leave);
             // 
-            // pictureBox3
+            // povtorpassField_image
             // 
-            this.pictureBox3.Image = global::Megabite.Properties.Resources._lock;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 242);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(64, 54);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
+            this.povtorpassField_image.Image = global::Megabite.Properties.Resources._lock;
+            this.povtorpassField_image.Location = new System.Drawing.Point(12, 242);
+            this.povtorpassField_image.Name = "povtorpassField_image";
+            this.povtorpassField_image.Size = new System.Drawing.Size(64, 54);
+            this.povtorpassField_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.povtorpassField_image.TabIndex = 5;
+            this.povtorpassField_image.TabStop = false;
             // 
             // RegistrForm
             // 
@@ -194,14 +194,14 @@
             this.Controls.Add(this.mainPanel);
             this.Name = "RegistrForm";
             this.Text = "RegistrForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.passField_image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginField_image)).EndInit();
             this.panel2.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.open_pass_button)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close_pass_button)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.povtorpassField_image)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -209,16 +209,16 @@
         #endregion
 
         private TextBox passField;
-        private PictureBox pictureBox2;
+        private PictureBox passField_image;
         private TextBox loginField;
-        private PictureBox pictureBox1;
+        private PictureBox loginField_image;
         private Panel panel2;
         private Label label1;
         private Panel mainPanel;
         private TextBox povtorPassField;
-        private PictureBox pictureBox3;
+        private PictureBox povtorpassField_image;
         private Button registrBtn;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox5;
+        private PictureBox close_pass_button;
+        private PictureBox open_pass_button;
     }
 }

@@ -15,6 +15,7 @@ namespace Megabite
     public partial class RegistrForm : Form
     {
         DB db= new DB();
+        
         public RegistrForm()
         {
             InitializeComponent();
@@ -40,13 +41,15 @@ namespace Megabite
             user.Login=login;
             user.Password = MD5Service.GetHash(pass);
             db.Users.Add(user);
+
             db.SaveChanges();
-               
+
             LoginForm loginForm = new LoginForm();
-            loginForm.passText = pass;
-            loginForm.loginText = login;
+
+            loginForm.instance.passText = pass;
+            loginForm.instance.loginText = login;
             this.Hide();
-            loginForm.Show();
+            loginForm.instance.Show();
             }            
         }
 
@@ -103,10 +106,14 @@ namespace Megabite
             foreach(var i in pass)
             {
                 
-                if (i >= 49 && i<=58)
+                //if (i >= 49 && i<=58)
+
+                if(Regex.IsMatch(i.ToString(), @"\d"))
                  countNumber++;
 
-                if ((i >= 'A' && i<='Z')|| (i >= 'А' && i<= 'Я'))
+                //if ((i >= 'A' && i<='Z')|| (i >= 'А' && i<= 'Я'))
+
+                if(Regex.IsMatch(i.ToString(), @"[A-Z]|[А-Я]"))
                     countUpperCase++;
 
             }
@@ -118,12 +125,15 @@ namespace Megabite
                 return false;
 
         }
-        public Boolean IsSimvolValid(Char ch)
+        public Boolean IsSimvolValid(string ch)
         {
-            if((ch>=49&&ch<=58)|| (ch >= 'A' && ch <= 'Z') || (ch >= 'А' && ch <= 'Я')|| (ch >= 'a' && ch <= 'z') || (ch >= 'а' && ch <= 'я'))
-            {
+            //if((ch>=49&&ch<=58)|| (ch >= 'A' && ch <= 'Z') || (ch >= 'А' && ch <= 'Я')|| (ch >= 'a' && ch <= 'z') || (ch >= 'а' && ch <= 'я'))
+            //{
+            //    return true;
+            //}
+            
+            if(Regex.IsMatch(ch, @"\w"))
                 return true;
-            }
             else
                 return false;
         }
@@ -134,7 +144,7 @@ namespace Megabite
             {
                 string login = loginField.Text;
                 char ch = login[login.Length - 1];
-                if (!IsSimvolValid(ch))
+                if (!IsSimvolValid(ch.ToString()))
                 {
                     int index = login.IndexOf(ch);
                     login = login.Remove(index);
@@ -151,7 +161,7 @@ namespace Megabite
             {
                 string pass = passField.Text;
                 char ch = pass[pass.Length - 1];
-                if (!IsSimvolValid(ch))
+                if (!IsSimvolValid(ch.ToString()))
                 {
                     int index = pass.IndexOf(ch);
                     pass = pass.Remove(index);
@@ -168,7 +178,7 @@ namespace Megabite
             {
                 string povtorPass = povtorPassField.Text;
                 char ch = povtorPass[povtorPass.Length - 1];
-                if (!IsSimvolValid(ch))
+                if (!IsSimvolValid(ch.ToString()))
                 {
                     int index = povtorPass.IndexOf(ch);
                     povtorPass = povtorPass.Remove(index);
@@ -191,18 +201,18 @@ namespace Megabite
             }
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void open_pass_button_Click(object sender, EventArgs e)
         {
             passField.UseSystemPasswordChar = false;
-            pictureBox5.Visible = false;
-            pictureBox4.Visible = true;
+            open_pass_button.Visible = false;
+            close_pass_button.Visible = true;
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void close_pass_button_Click(object sender, EventArgs e)
         {
             passField.UseSystemPasswordChar = true;
-            pictureBox5.Visible = true;
-            pictureBox4.Visible = false;
+            open_pass_button.Visible = true;
+            close_pass_button.Visible = false;
         }
 
         private void passField_Enter(object sender, EventArgs e)
